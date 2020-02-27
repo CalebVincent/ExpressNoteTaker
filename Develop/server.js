@@ -24,7 +24,32 @@ app.get("/api/notes", function (req,res) {
     return res.json(db);
 });
 
-
+// setup post routes for new notes and deleting notes
+app.post("/api/notes", function (req, res) {
+    // req.body hosts is equal to the JSON post sent from the user
+    // This works because of our body parsing middleware
+    var newNote = req.body;
+    db.push(newNote);
+  
+    fs.writeFileSync(path.join(__dirname, '/db/db.json'), JSON.stringify(db), function (err) {
+      if (err) {
+        return console.log(err);
+      };
+    });
+    res.json(newNote);
+  });
+  
+  app.delete("/api/notes/:id", function (req,res) {
+    for (i=0; i < db.length; i++) {
+      if (db[i].id == req.params.id) {
+        db.splice(i,1);
+      }
+    };
+    fs.writeFile(path.join(__dirname, "/db/db.json"), JSON.stringify(req.params.id), "UTF8", (error) =>{
+      if (error) throw error;
+    })
+  });
+  
 
 // Starts the server to begin listening
 // =============================================================
