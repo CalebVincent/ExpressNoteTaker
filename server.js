@@ -11,6 +11,8 @@ var PORT = 3000;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.use(express.static("Develop/public"));
+
 // setup html routes
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "Develop/public/index.html"));
