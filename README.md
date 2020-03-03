@@ -1,6 +1,8 @@
 # ExpressNoteTaker
 
-Deployed Link : https://calebvincent.github.io/ExpressNoteTaker/
+[Link to deployed site](https://calebvincent.github.io/ExpressNoteTaker)
+![Express Note Taker application Welcome Page](https://drive.google.com/open?id=16T3ZUsCwAux9Rnh2Tgi8N6SW5WSmHxGv)
+![List of recorded workouts](https://drive.google.com/open?id=1i_QegfkkEnC4fuRp-CMYu8qJwYhvVjSE)
 
 The Express Note Taker allows someone to save personal notes locally to their system, only accessible to those on the same device.
 
@@ -24,4 +26,4 @@ SO THAT no unauthorized persons may access my information.
 
 # Business Context
 
-People of all walks of life can appreciate the privacy that comes with information being stored out of arms reach of unauthorized people.
+People from all walks of life can appreciate the privacy that comes with information being stored out of arms reach of unauthorized people.

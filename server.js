@@ -1,7 +1,7 @@
 // dependencies
 var express = require("express");
 var path = require("path");
-var db = require("./db/db.json");
+var db = require("./Develop/db/db.json");
 var fs = require("fs");
 
 // setup express app
@@ -13,11 +13,11 @@ app.use(express.json());
 
 // setup html routes
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "public/index.html"));
+    res.sendFile(path.join(__dirname, "Develop/public/index.html"));
   });
 
 app.get("/notes", function (req, res) {
-    res.sendFile(path.join(__dirname, "public/notes.html"));
+    res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
   });
 
 app.get("/api/notes", function (req,res) {
